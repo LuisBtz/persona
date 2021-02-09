@@ -1,0 +1,414 @@
+{
+    "_createdAt": "2021-01-26T18:21:39Z",
+    "_id": "f633c5ba-dc59-40d8-a263-5b22d35dd706",
+    "_rev": "L1Cr7Sb4J4f3afaI3uKxit",
+    "_type": "about",
+    "_updatedAt": "2021-02-05T22:36:27Z",
+    "description": [
+      {
+        "_key": "feb5913e1fa6",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "57f01828eb26",
+            "_type": "span",
+            "marks": [],
+            "text": "Art is a catalyst for change."
+          }
+        ],
+        "markDefs": [],
+        "style": "h1"
+      },
+      {
+        "_key": "2897d74332a2",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "ecf9425edf920",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "h1"
+      },
+      {
+        "_key": "9319f6eb82de",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "0a24936a0a550",
+            "_type": "span",
+            "marks": [],
+            "text": "The voices of artists are essential to shape a balanced society."
+          }
+        ],
+        "markDefs": [],
+        "style": "h1"
+      },
+      {
+        "_key": "10cfc1218fbc",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "6749d7ddbbf00",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "h1"
+      },
+      {
+        "_key": "e43a81b26244",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "2d7e5d5175080",
+            "_type": "span",
+            "marks": [],
+            "text": "Art must be available to everyone."
+          }
+        ],
+        "markDefs": [],
+        "style": "h1"
+      },
+      {
+        "_key": "699e721e09f4",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "59de4e917c160",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "5b553e5327a3",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "a29580754b570",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Persona"
+          },
+          {
+            "_key": "a29580754b571",
+            "_type": "span",
+            "marks": [],
+            "text": " was conceived in 2018, thanks to the support of the Rockefeller Brothers Fund, as an exchange program providing artists with the opportunity to live and create work between "
+          },
+          {
+            "_key": "a29580754b572",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Monterrey, Mexico"
+          },
+          {
+            "_key": "a29580754b573",
+            "_type": "span",
+            "marks": [],
+            "text": " and "
+          },
+          {
+            "_key": "a29580754b574",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "New York."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "4a08a7b4055b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "e83313a53efb0",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "ad2fbd97318b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "19458205c3940",
+            "_type": "span",
+            "marks": [],
+            "text": "We are committed to commissioning multidisciplinary art projects to mark the culmination of each artist’s residency, such projects include, artist lectures, installations, sound compositions, endurance performances, monographic exhibitions, and architectural interventions."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "09bea3735af7",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "87870371e4730",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "6b5db428df63",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "0d075288e8b20",
+            "_type": "span",
+            "marks": [],
+            "text": "Our Mission"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "543f24fa8f03",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "9d8da36a65cf0",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "be13fb5347e8",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "7daa9869d6ed0",
+            "_type": "span",
+            "marks": [],
+            "text": "Expand the understanding of contemporary art while serving as a bridge that fosters an exchange between creatives throughout Mexico and abroad."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "9bcd6d500ffe",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "a973e290de2a0",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "09a96090ad63",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "bce5cc0a4bb10",
+            "_type": "span",
+            "marks": [],
+            "text": "Our Vision"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "c7bd0b98592b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "51e80b3ff5b90",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "0fe6c2437f73",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "c4eb05518fda0",
+            "_type": "span",
+            "marks": [],
+            "text": "To incite knowledge creation, experimentation, new modes of collaboration, and the coproduction of awareness, dialogue, and solutions for the pressing challenges affecting us today."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "9eb8aedf67cc",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "b6feed527c280",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "a699b5bf6858",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "df284c92b5e50",
+            "_type": "span",
+            "marks": [],
+            "text": "Our Ethos"
+          }
+        ],
+        "markDefs": [],
+        "style": "h2"
+      },
+      {
+        "_key": "506a8ec82f1b",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "1760c9a8413d0",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n"
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "9e194feff94e",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "d789b7ab58ea0",
+            "_type": "span",
+            "marks": [],
+            "text": "We are interested in the fissures and crossovers between different disciplines particularly art, architecture, and design. "
+          },
+          {
+            "_key": "d789b7ab58ea1",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "Persona"
+          },
+          {
+            "_key": "d789b7ab58ea2",
+            "_type": "span",
+            "marks": [],
+            "text": " sees itself as a producer of art and culture, not just a frozen frame for it, therefore making both its "
+          },
+          {
+            "_key": "d789b7ab58ea3",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "physical space"
+          },
+          {
+            "_key": "d789b7ab58ea4",
+            "_type": "span",
+            "marks": [],
+            "text": " and "
+          },
+          {
+            "_key": "d789b7ab58ea5",
+            "_type": "span",
+            "marks": [
+              "strong"
+            ],
+            "text": "digital portals"
+          },
+          {
+            "_key": "d789b7ab58ea6",
+            "_type": "span",
+            "marks": [],
+            "text": ", outlets for creative expression and content generation."
+          }
+        ],
+        "markDefs": [],
+        "style": "normal"
+      },
+      {
+        "_key": "b705aa6fff96",
+        "_type": "block",
+        "children": [
+          {
+            "_key": "940931916b3b0",
+            "_type": "span",
+            "marks": [],
+            "text": "\n\n\n\n\n\n\n"
+          },
+          {
+            "_key": "940931916b3b1",
+            "_type": "span",
+            "marks": [
+              "622037858b4d"
+            ],
+            "text": "Donate"
+          },
+          {
+            "_key": "8949c324a037",
+            "_type": "span",
+            "marks": [],
+            "text": "​ "
+          }
+        ],
+        "markDefs": [
+          {
+            "_key": "622037858b4d",
+            "_type": "link",
+            "href": "http://localhost:8000/about#"
+          }
+        ],
+        "style": "normal"
+      }
+    ],
+    "name": "About",
+    "slug": {
+      "_type": "slug",
+      "current": "about"
+    }
+  }
