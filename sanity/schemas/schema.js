@@ -7,6 +7,8 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 
 import home from './home';
 import about from './about';
+import residents from './residents';
+import categories from './categories';
 
 
 
@@ -15,5 +17,5 @@ export default createSchema({
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([home, about]),
+  types: schemaTypes.concat([home, about, residents, categories]),
 });

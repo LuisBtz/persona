@@ -27,13 +27,6 @@ export default {
             of: [
                 {
                     type: 'block',
-                    // Only allow these block styles
-                    styles: [
-                        {title: 'Normal', value: 'normal'},
-                        {title: 'H2', value: 'h1'},
-                        {title: 'H3', value: 'h2'}
-                        
-                      ],
                 }
             ]
           }

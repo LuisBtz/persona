@@ -2,6 +2,7 @@ export default {
     // 
     name: 'home',
     title: 'Home',
+    __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'], 
     type: 'document',
     icon : () => `🏠`,
     fields: [
