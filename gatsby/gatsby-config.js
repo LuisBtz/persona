@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 
 dotenv.config({ path: '.env' });
 
-const path = require(`path`);
+const path = require('path');
 
 module.exports = {
   siteMetadata: {

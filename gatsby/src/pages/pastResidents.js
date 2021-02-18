@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { graphql, useStaticQuery, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 
-import Img from 'gatsby-image';
+import PastResidentsList from '../components/pastResidentsList';
 
 const PastSection = styled.div`
   width: 100%;
@@ -51,146 +51,35 @@ const PastSection = styled.div`
   }
 `;
 
-export default function PastResidentsPage() {
-  const data = useStaticQuery(graphql`
-    query {
-      blogImage01: file(relativePath: { eq: "blog-01.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      blogImage02: file(relativePath: { eq: "bg-home.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      blogImage03: file(relativePath: { eq: "blog-01.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      blogImage04: file(relativePath: { eq: "bg-home.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      blogImage05: file(relativePath: { eq: "blog-01.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-      blogImage06: file(relativePath: { eq: "bg-home.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 1800) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
-  const image01 = data.blogImage01.childImageSharp.fluid;
-  const image02 = data.blogImage02.childImageSharp.fluid;
-  const image03 = data.blogImage03.childImageSharp.fluid;
-  const image04 = data.blogImage04.childImageSharp.fluid;
-  const image05 = data.blogImage05.childImageSharp.fluid;
-  const image06 = data.blogImage06.childImageSharp.fluid;
-
-  const [carlos, showCarlos] = useState(false);
-  const [gabriel, showGabriel] = useState(false);
-  const [lukas, showLukas] = useState(false);
-  const [sol, showSol] = useState(false);
-  const [hector, showHector] = useState(false);
-  const [tezontle, showTezontle] = useState(false);
+export default function PastResidentsPage({ data }) {
+  const pastResidents = data.pastResidents.nodes;
 
   return (
     <PastSection>
-      <h3 className="pageName">Past Residents</h3>
+      <h3 className="pageName">Past Residents </h3>
       <section>
-        <div className="lista">
-          <h4>Residents</h4>
-          <ul>
-            <li>
-              <Link
-                to="/project"
-                className="carlos-martiel"
-                onMouseEnter={() => showCarlos(true)}
-                onMouseLeave={() => showCarlos(false)}
-              >
-                Carlos Martiel
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/project"
-                className="gabriel-rico"
-                onMouseEnter={() => showGabriel(true)}
-                onMouseLeave={() => showGabriel(false)}
-              >
-                Carlos Martiel Gabriel Rico
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/project"
-                className="lukas-gschwandtner"
-                onMouseEnter={() => showLukas(true)}
-                onMouseLeave={() => showLukas(false)}
-              >
-                Lukas Gschwandtner
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/project"
-                className="sol-oosel"
-                onMouseEnter={() => showSol(true)}
-                onMouseLeave={() => showSol(false)}
-              >
-                Sol Oosel
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/project"
-                className="hector-jimenez"
-                onMouseEnter={() => showHector(true)}
-                onMouseLeave={() => showHector(false)}
-              >
-                Héctor Jiménez
-              </Link>
-            </li>
-            <li>
-              <Link
-                to="/project"
-                className="tezontle"
-                onMouseEnter={() => showTezontle(true)}
-                onMouseLeave={() => showTezontle(false)}
-              >
-                Tezontle
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div className="imagenes">
-          {carlos && <Img fluid={image01} className="carlos-martiel" />}
-          {gabriel && <Img fluid={image02} className="gabriel-rico" />}
-          {lukas && <Img fluid={image03} className="lukas-gschwandtner" />}
-          {sol && <Img fluid={image04} className="sol-oosel" />}
-          {hector && <Img fluid={image05} className="hector-jimenez" />}
-          {tezontle && <Img fluid={image06} className="tezontle" />}
-        </div>
+        <PastResidentsList pastResidents={pastResidents} />
       </section>
     </PastSection>
   );
 }
+
+export const query = graphql`
+  query {
+    pastResidents: allSanityResidents {
+      nodes {
+        name
+        slug {
+          current
+        }
+        residentImage {
+          asset {
+            fluid(maxWidth: 400) {
+              ...GatsbySanityImageFluid
+            }
+          }
+        }
+      }
+    }
+  }
+`;

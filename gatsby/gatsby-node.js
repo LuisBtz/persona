@@ -1,19 +1,35 @@
-import { LocalPizza } from '@material-ui/icons';
 import path from 'path';
 
-async function turnHomeIntoPages(params) {
+async function turnResidentIntoPages({ graphql, actions }) {
   // 1. Get templatew
-  const residentsTemplate = path.resolve(./src/templates/Residents.js);
+  const residentTemplate = path.resolve('./src/templates/PastResident.js');
   // 2. Query Residents
-  const {data} = await graphql(`
-  
+  const { data } = await graphql(`
+    query {
+      residents: allSanityResidents {
+        nodes {
+          name
+          slug {
+            current
+          }
+        }
+      }
+    }
   `);
+  console.log(data);
   // 3. Loop
+  data.residents.nodes.forEach((resident) => {
+    actions.createPage({
+      // URL
+      path: `pastResidents/${resident.slug.current}`,
+      component: residentTemplate,
+    });
+  });
 }
 
 export async function createPages(params) {
-  console.log('create pages !!');
-  console.log('create pages !!');
-  console.log('create pages !!');
-  console.log('create pages !!');
+  // Create pages dunamically
+  // 1. Residents Current
+  await turnResidentIntoPages(params);
+  // 2. Residents Past
 }
