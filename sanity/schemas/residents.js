@@ -30,6 +30,24 @@ export default {
       },
     },
     {
+      name: 'shortText',
+      title: 'Short Text',
+      type: 'object',
+      description: 'Short text below main image',
+      fields: [
+        {
+          name: 'en',
+          title: 'English',
+          type: 'string',
+        },
+        {
+          name: 'es',
+          title: 'Español',
+          type: 'string',
+        },
+      ],
+    },
+    {
       name: 'images',
       title: 'Images',
       type: 'array',
@@ -41,23 +59,59 @@ export default {
       ],
     },
     {
-      name: 'categories',
-      title: 'Category',
-      type: 'array',
-      of: [
-        {
-          type: 'reference',
-          to: { type: 'categories' },
-        },
-      ],
+      title: 'Is it a current resident?',
+      name: 'current',
+      type: 'string',
+      options: {
+        list: [
+          { title: 'Past', value: 'past' },
+          { title: 'Current', value: 'current' },
+          { title: 'Upcoming', value: 'upcoming' },
+        ], // <-- predefined values
+      },
     },
     {
-      name: 'body',
+      name: 'bodyField',
       title: 'Page body',
-      type: 'array',
-      of: [
+      type: 'object',
+      fields: [
         {
-          type: 'block',
+          name: 'en',
+          title: 'English',
+          type: 'array',
+          of: [
+            {
+              type: 'block',
+              styles: [
+                { title: 'Normal', value: 'normal' },
+                { title: 'H2', value: 'h2' },
+                { title: 'H3', value: 'h3' },
+              ],
+              lists: [], // no lists, thanks
+              marks: {
+                decorators: [{ title: 'Strong', value: 'strong' }],
+              },
+            },
+          ],
+        },
+        {
+          name: 'es',
+          title: 'Español',
+          type: 'array',
+          of: [
+            {
+              type: 'block',
+              styles: [
+                { title: 'Normal', value: 'normal' },
+                { title: 'H2', value: 'h2' },
+                { title: 'H3', value: 'h3' },
+              ],
+              lists: [], // no lists, thanks
+              marks: {
+                decorators: [{ title: 'Strong', value: 'strong' }],
+              },
+            },
+          ],
         },
       ],
     },

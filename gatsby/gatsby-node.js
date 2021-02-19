@@ -23,6 +23,10 @@ async function turnResidentIntoPages({ graphql, actions }) {
       // URL
       path: `pastResidents/${resident.slug.current}`,
       component: residentTemplate,
+      context: {
+        slug: resident.slug.current,
+        current: true,
+      },
     });
   });
 }

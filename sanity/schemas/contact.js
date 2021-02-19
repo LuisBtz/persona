@@ -2,6 +2,7 @@ export default {
   //
   name: 'contact',
   title: 'Contact',
+  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   type: 'document',
   icon: () => `☎️`,
   fields: [
@@ -29,10 +30,27 @@ export default {
     {
       title: 'Contact info',
       name: 'body',
-      type: 'array',
-      of: [
+      type: 'object',
+      fields: [
         {
-          type: 'block',
+          name: 'en',
+          title: 'English',
+          type: 'array',
+          of: [
+            {
+              type: 'block',
+            },
+          ],
+        },
+        {
+          name: 'es',
+          title: 'Español',
+          type: 'array',
+          of: [
+            {
+              type: 'block',
+            },
+          ],
         },
       ],
     },

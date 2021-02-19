@@ -66,7 +66,7 @@ export default function PastResidentsPage({ data }) {
 
 export const query = graphql`
   query {
-    pastResidents: allSanityResidents {
+    pastResidents: allSanityResidents(filter: { current: { eq: true } }) {
       nodes {
         name
         slug {
