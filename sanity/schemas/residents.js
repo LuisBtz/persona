@@ -1,9 +1,12 @@
+import { i18n } from './documentTranslations'
+
 export default {
   //
   name: 'residents',
   title: 'Residents',
   type: 'document',
   icon: () => `📝`,
+  i18n,
   fields: [
     {
       name: 'name',
@@ -32,20 +35,8 @@ export default {
     {
       name: 'shortText',
       title: 'Short Text',
-      type: 'object',
+      type: 'string',
       description: 'Short text below main image',
-      fields: [
-        {
-          name: 'en',
-          title: 'English',
-          type: 'string',
-        },
-        {
-          name: 'es',
-          title: 'Español',
-          type: 'string',
-        },
-      ],
     },
     {
       name: 'images',
@@ -71,49 +62,9 @@ export default {
       },
     },
     {
-      name: 'bodyField',
-      title: 'Page body',
-      type: 'object',
-      fields: [
-        {
-          name: 'en',
-          title: 'English',
-          type: 'array',
-          of: [
-            {
-              type: 'block',
-              styles: [
-                { title: 'Normal', value: 'normal' },
-                { title: 'H2', value: 'h2' },
-                { title: 'H3', value: 'h3' },
-              ],
-              lists: [], // no lists, thanks
-              marks: {
-                decorators: [{ title: 'Strong', value: 'strong' }],
-              },
-            },
-          ],
-        },
-        {
-          name: 'es',
-          title: 'Español',
-          type: 'array',
-          of: [
-            {
-              type: 'block',
-              styles: [
-                { title: 'Normal', value: 'normal' },
-                { title: 'H2', value: 'h2' },
-                { title: 'H3', value: 'h3' },
-              ],
-              lists: [], // no lists, thanks
-              marks: {
-                decorators: [{ title: 'Strong', value: 'strong' }],
-              },
-            },
-          ],
-        },
-      ],
+      name: 'body',
+      title: 'Body',
+      type: 'blockContent',
     },
   ],
-};
+}

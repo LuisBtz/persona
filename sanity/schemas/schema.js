@@ -8,11 +8,12 @@ import home from './home';
 import about from './about';
 import residents from './residents';
 import contact from './contact';
+import blockContent from './blockContent';
 
 export default createSchema({
   // We name our schema
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([home, about, residents, contact]),
+  types: schemaTypes.concat([home, about, residents, contact, blockContent]),
 });

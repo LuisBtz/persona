@@ -1,10 +1,12 @@
+import { i18n } from './documentTranslations'
+
 export default {
   //
   name: 'contact',
   title: 'Contact',
-  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   type: 'document',
   icon: () => `☎️`,
+  i18n,
   fields: [
     {
       name: 'name',
@@ -28,31 +30,9 @@ export default {
       description: 'The code of the map',
     },
     {
-      title: 'Contact info',
       name: 'body',
-      type: 'object',
-      fields: [
-        {
-          name: 'en',
-          title: 'English',
-          type: 'array',
-          of: [
-            {
-              type: 'block',
-            },
-          ],
-        },
-        {
-          name: 'es',
-          title: 'Español',
-          type: 'array',
-          of: [
-            {
-              type: 'block',
-            },
-          ],
-        },
-      ],
+      title: 'Body',
+      type: 'blockContent',
     },
   ],
-};
+}

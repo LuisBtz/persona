@@ -1,3 +1,5 @@
+import { i18n } from './documentTranslations';
+
 export default {
   //
   name: 'home',
@@ -5,6 +7,7 @@ export default {
   __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
   type: 'document',
   icon: () => `🏠`,
+  i18n,
   fields: [
     {
       name: 'name',
@@ -24,20 +27,8 @@ export default {
     {
       name: 'description',
       title: 'Description',
-      type: 'object',
+      type: 'string',
       description: 'Text in middle of the page',
-      fields: [
-        {
-          title: 'English',
-          name: 'en',
-          type: 'string',
-        },
-        {
-          title: 'Español',
-          name: 'es',
-          type: 'string',
-        },
-      ],
     },
     {
       name: 'image',
@@ -50,19 +41,7 @@ export default {
     {
       title: 'Link to project',
       name: 'imageUrl',
-      type: 'object',
-      fields: [
-        {
-          title: 'English',
-          name: 'en',
-          type: 'url',
-        },
-        {
-          title: 'Español',
-          name: 'es',
-          type: 'url',
-        },
-      ],
+      type: 'url',
     },
   ],
 };
