@@ -1,37 +1,33 @@
-import { i18n } from './documentTranslations';
-
 export default {
   //
-  name: 'home',
-  title: 'Home',
-  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'],
+  name: 'homePage',
+  title: 'Home Page',
   type: 'document',
+  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'], 
   icon: () => `🏠`,
-  i18n,
   fields: [
     {
       name: 'name',
       title: 'Page Name',
-      type: 'string',
-      description: 'The name of this page',
+      type: 'localeString',
     },
     {
       name: 'slug',
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'name.es',
         maxLength: 100,
       },
     },
     {
       name: 'description',
       title: 'Description',
-      type: 'string',
+      type: 'localeString',
       description: 'Text in middle of the page',
     },
     {
-      name: 'image',
+      name: 'backgroundImage',
       title: 'Background image',
       type: 'image',
       options: {
@@ -41,7 +37,14 @@ export default {
     {
       title: 'Link to project',
       name: 'imageUrl',
-      type: 'url',
+      type: 'localeLink',
     },
   ],
+  preview: {
+    select: {
+      title: 'name.es',
+      subtitle: 'releaseDate',
+      media: 'backgroundImage'
+    }
+  }
 };

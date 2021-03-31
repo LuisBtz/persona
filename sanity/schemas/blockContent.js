@@ -4,7 +4,6 @@ export default {
   type: 'array',
   of: [
     {
-      title: 'Block',
       type: 'block',
       styles: [
         { title: 'Normal', value: 'normal' },
@@ -20,10 +19,7 @@ export default {
     {
       title: 'Inline Image',
       name: 'inlineimage',
-      type: 'image',
-      blockEditor: {
-        icon: () => '🖼️',
-      },
+      type: 'inlineimage',
     },
   ],
 }

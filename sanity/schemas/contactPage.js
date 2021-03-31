@@ -1,17 +1,16 @@
-import { i18n } from './documentTranslations'
 
 export default {
   //
-  name: 'contact',
-  title: 'Contact',
+  name: 'contactPage',
+  title: 'Contact Page',
   type: 'document',
+  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'], 
   icon: () => `☎️`,
-  i18n,
   fields: [
     {
       name: 'name',
       title: 'Page Name',
-      type: 'string',
+      type: 'localeString',
       description: 'The name of this page',
     },
     {
@@ -19,7 +18,7 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'name.en',
         maxLength: 100,
       },
     },
@@ -32,7 +31,12 @@ export default {
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
+      type: 'localeBody',
     },
   ],
+  preview: {
+    select: {
+      title: 'name.es',
+    }
+  }
 }

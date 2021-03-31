@@ -1,18 +1,16 @@
-import { i18n } from './documentTranslations'
-import { baseLanguage } from './languages'
 
 export default {
   //
-  name: 'about',
-  title: 'About',
+  name: 'aboutPage',
+  title: 'About Page',
   type: 'document',
+  __experimental_actions: [/*'create',*/ 'update', /*'delete',*/ 'publish'], 
   icon: () => `📎`,
-  i18n,
   fields: [
     {
       name: 'name',
       title: 'Page Name',
-      type: 'string',
+      type: 'localeString',
       description: 'The name of this page',
     },
     {
@@ -20,13 +18,18 @@ export default {
       title: 'Slug',
       type: 'slug',
       options: {
-        source: 'name',
+        source: 'name.en',
       },
     },
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
+      type: 'localeBody',
     },
   ],
+  preview: {
+    select: {
+      title: 'name.es',
+    }
+  }
 }

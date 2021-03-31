@@ -70,22 +70,22 @@ export default function SinglePastResidents({ data: { pastResident } }) {
   );
 }
 
-export const query = graphql`
-  query($slug: String!) {
-    pastResident: sanityResidents(slug: { current: { eq: $slug } }) {
-      name
-      id
-      images {
-        asset {
-          fluid(maxWidth: 400) {
-            ...GatsbySanityImageFluid
-          }
-        }
-      }
-      slug {
-        current
-      }
-      _rawBodyField
-    }
-  }
-`;
+// export const query = graphql`
+//   query($slug: String!) {
+//     pastResident: sanityResidents(slug: { current: { eq: $slug } }) {
+//       name
+//       id
+//       images {
+//         asset {
+//           fluid(maxWidth: 400) {
+//             ...GatsbySanityImageFluid
+//           }
+//         }
+//       }
+//       slug {
+//         current
+//       }
+//       _rawBodyField
+//     }
+//   }
+// `;

@@ -1,51 +1,58 @@
 import React from 'react';
-import { graphql, useStaticQuery } from 'gatsby';
-import BackgroundImage from 'gatsby-background-image';
+import { graphql } from 'gatsby';
+import { getImage } from "gatsby-plugin-image"
+
+import { convertToBgImage } from "gbimage-bridge"
+import BackgroundImage from 'gatsby-background-image'
 import styled from 'styled-components';
 
-const HomePage = ({ className }) => {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        indexImage: file(relativePath: { eq: "bg-home.jpg" }) {
-          childImageSharp {
-            fluid(maxWidth: 1800) {
-              ...GatsbyImageSharpFluid
-            }
-          }
-        }
-        home: sanityHome {
-          name
-          description
-          slug {
-            current
-          }
-          image {
-            asset {
-              fluid(maxWidth: 1200) {
-                ...GatsbySanityImageFluid
-              }
-            }
-          }
+
+export const query = graphql`
+{
+  home: sanityHomePage {
+    backgroundImage {
+      asset {
+        fluid(maxWidth: 1200) {
+          ...GatsbySanityImageFluid
         }
       }
-    `
+    }
+    description {
+      es
+    }
+    imageUrl {
+      es
+    }
+    name {
+      es
+    }
+    slug {
+      current
+    }
+  }
+}`
+
+const HomePage = ({ data }) => {
+
+  const sanityHome = data.home;
+
+
+
+  const image = getImage(sanityHome)
+
+  const bgImage = sanityHome.backgroundImage.asset.fluid
+
+
+  return(
+<StyledBackgroundSection fluid={bgImage}>
+      <h1>{sanityHome.description.es}</h1>
+      {sanityHome.imageUrl.es ? <a href={sanityHome.imageUrl.es}></a> : null}
+    </StyledBackgroundSection>
   );
+  
+}
 
-  // Set ImageData
-  const imageData = data.indexImage.childImageSharp.fluid;
-
-  // Campos del cms
-  const descriptionText = data.home.description;
-  const imageHome = data.home.image.asset.fluid;
-  return (
-    <BackgroundImage fluid={imageHome} Tag="section" className={className}>
-      <h1>{descriptionText}</h1>
-    </BackgroundImage>
-  );
-};
-
-const StyledBackgroundSection = styled(HomePage)`
+const StyledBackgroundSection = styled(BackgroundImage)`
   background-position: bottom center;
   background-repeat: repeat-y;
   background-size: cover;
@@ -63,6 +70,13 @@ const StyledBackgroundSection = styled(HomePage)`
     transform: translate(-50%, -50%);
     color: var(--bg);
   }
+  a {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+  }
 `;
 
-export default StyledBackgroundSection;
+export default HomePage;
+

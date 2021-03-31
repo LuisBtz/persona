@@ -33,26 +33,23 @@ const AboutSection = styled.div`
 export default function AboutPage({ data }) {
   return (
     <AboutSection>
-      <h3 className='pageName'>{data.i18n.languages.name}</h3>
+      {/* <h3 className='pageName'>{data.i18n.languages.name}</h3>
       <section>
         <BlockContent blocks={data.about._rawBody} />
-      </section>
+      </section> */}
+      <h1>test</h1>
     </AboutSection>
   );
 }
 
-export const data = graphql`
-  query {
-    about: sanityAbout {
-      i18n(filter: { language: { eq: "en_US" } }) {
-        languages {
-          name
-          _rawBody
-          slug {
-            current
-          }
-        }
-      }
-    }
-  }
-`;
+// export const data = graphql`
+//   query {
+//     about: sanityAbout {
+//           name
+//           _rawBody
+//           slug {
+//             current
+//           }
+//     }
+//   }
+// `;

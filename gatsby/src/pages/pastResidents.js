@@ -64,22 +64,22 @@ export default function PastResidentsPage({ data }) {
   );
 }
 
-export const query = graphql`
-  query {
-    pastResidents: allSanityResidents(filter: { current: { eq: true } }) {
-      nodes {
-        name
-        slug {
-          current
-        }
-        residentImage {
-          asset {
-            fluid(maxWidth: 400) {
-              ...GatsbySanityImageFluid
-            }
-          }
-        }
-      }
-    }
-  }
-`;
+// export const query = graphql`
+//   query {
+//     pastResidents: allSanityResidents(filter: { current: { eq: true } }) {
+//       nodes {
+//         name
+//         slug {
+//           current
+//         }
+//         residentImage {
+//           asset {
+//             fluid(maxWidth: 400) {
+//               ...GatsbySanityImageFluid
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+// `;

@@ -4,10 +4,18 @@ import createSchema from 'part:@sanity/base/schema-creator';
 import schemaTypes from 'all:part:@sanity/base/schema-type';
 // Then we give our schema to the builder and provide the result to Sanity
 
-import home from './home';
-import about from './about';
+// GraphQl implementation
+
+
+import localeString from './locale/localeString';
+import localeLink from './locale/localeLink';
+import localeBody from './locale/localeBody';
+import inlineimage from './imageBlock';
+
+import homePage from './homePage';
+import aboutPage from './aboutPage';
 import residents from './residents';
-import contact from './contact';
+import contactPage from './contactPage';
 import blockContent from './blockContent';
 
 export default createSchema({
@@ -15,5 +23,5 @@ export default createSchema({
   name: 'default',
   // Then proceed to concatenate our document type
   // to the ones provided by any plugins that are installed
-  types: schemaTypes.concat([home, about, residents, contact, blockContent]),
+  types: schemaTypes.concat([localeString, localeLink, localeBody, inlineimage, homePage, aboutPage, residents, contactPage, blockContent]),
 });

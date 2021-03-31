@@ -1,12 +1,9 @@
-import { i18n } from './documentTranslations'
-
 export default {
   //
   name: 'residents',
   title: 'Residents',
   type: 'document',
   icon: () => `📝`,
-  i18n,
   fields: [
     {
       name: 'name',
@@ -35,7 +32,7 @@ export default {
     {
       name: 'shortText',
       title: 'Short Text',
-      type: 'string',
+      type: 'localeString',
       description: 'Short text below main image',
     },
     {
@@ -64,7 +61,7 @@ export default {
     {
       name: 'body',
       title: 'Body',
-      type: 'blockContent',
+      type: 'localeBody',
     },
   ],
 }

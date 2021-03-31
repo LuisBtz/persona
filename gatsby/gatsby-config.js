@@ -10,8 +10,9 @@ module.exports = {
     description: `Description Persona`,
   },
   plugins: [
+    `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    `gatsby-transformer-sharp`, 
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,5 +29,6 @@ module.exports = {
         token: process.env.SANITY_TOKEN,
       },
     },
+    
   ],
 };
